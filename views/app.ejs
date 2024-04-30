@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .head {
+            display: flex;
+            justify-content: center;
+            font-size: x-large;
+            font-family: system-ui;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Fild basic requirement </h1>
+    </div>
+    <div class="container">
+        <form action="/resume" method="post">
+            <label >Name:</label>
+            <input type="text" required name="name" id="name">
+            <label >Field:</label>
+            <input type="text" required name="fild" id="field">
+            <label >Number:</label>
+            <input type="text" required name="number" id="field">
+            <label >email:</label>
+            <input type="text" required name="email" id="field">
+          
+            <label >phn:</label>
+            <input type="text" required name="phn" id="field">
+          
+           
+            <button type="submit">Submit Here</button>
+        </form>
+    </div>
+</body>
+
+</html>

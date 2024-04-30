@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src=""></script>
+    <title>Document</title>
+    <style>
+        /* Move the CSS inside the head tag */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .first-container {
+
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: none;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-upload label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .file-upload label:hover {
+            background-color: #0056b3;
+        }
+
+        .checkbox label {
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkbox .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+
+        .checkbox label:hover .checkmark {
+            background-color: #bbb;
+        }
+
+        .checkbox input:checked~.checkmark {
+            background-color: #007bff;
+        }
+
+        .checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkbox input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .checkbox .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .first-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .s-summ {
+            font-style: italic;
+        }
+        #first-div{
+            display: block;
+        }
+        #button{
+            display: flex;
+            justify-content: center;
+            margin: 2px 2px; 
+        }
+        button {
+            background-color: #007bff; /* Blue color */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Padding for better appearance */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Cursor on hover */
+            font-size: 16px; /* Font size */
+           
+          }
+      
+          button:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+          }
+    </style>
+</head>
+
+<body>
+    <div id="first-div">
+        <div class="first-container">
+            <h2>Resume Form</h2>
+            <form enctype="multipart/form-data" id="from-data">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="Field">Field:</label>
+                <input type="text" id="Field" name="Field" required>
+
+                <label for="saddress">Short ADD.:</label>
+                <input type="text" id="saddress" name="saddress" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" required></textarea>
+
+                <label for="experience">Work Experience:</label>
+                <textarea id="experience" name="experience" required></textarea>
+
+                <div>
+                    <label>Skills:</label>
+                    <div>
+                        <input type="checkbox" id="html" name="skills[]" value="HTML">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="css" name="skills[]" value="CSS">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="javascript" name="skills[]" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="python" name="skills[]" value="Python">
+                        <label for="python">Python</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="java" name="skills[]" value="Java">
+                        <label for="java">Java</label>
+                    </div>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the <a href="#">terms and conditions</a>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <input type="submit" value="Submit" class="submit" id="sub">
+                <input type="reset" value="Clear">
+            </form>
+        </div>
+    </div>
+    
+
+
+
+    <div id="container"></div>
+
+    <br>
+    <hr>
+    <h2>@minmoyDholey</h2>
+    <script>
+
+        async function generatePDF() {
+            try {
+                const response = await fetch('/generate-pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    // Pass template literal content as JSON data
+                    body: JSON.stringify({ content: document.getElementById('container').innerHTML })
+                });
+                if (response.ok) {
+                    // Download the generated PDF file
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'resume.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                    console.log("I am in resume.ejs file ")
+                } else {
+                    console.error('Failed to generate PDF');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+            
+
+
+        const btn = document.querySelector(".submit");
+        const div = document.getElementById("first-div");
+        const container = document.getElementById("container");
+
+        
+
+        const form = document.getElementById("from-data");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent default form submission behavior
+
+
+            const fullname = document.getElementById("fullname").value;
+            const field = document.getElementById("Field").value;
+            const saddress = document.getElementById("saddress").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const dob = document.getElementById("dob").value;
+            const address = document.getElementById("address").value;
+            const education = document.getElementById("education").value;
+            const experience = document.getElementById("experience").value;
+
+            const skills = [];
+            const checkboxes = document.querySelectorAll('input[name="skills[]"]:checked');
+            checkboxes.forEach((checkbox) => {
+                skills.push(checkbox.value);
+            });
+
+           
+            
+
+            container.innerHTML += `
+                <section class="section">
+                    <b align="center"><h1>${fullname}</h1>
+                    <p class="s-add">${saddress}</p>
+                    <p class="s-email">${email} | ${phone}</p>
+                    <hr>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title" align="center">Summary</h2>
+                    <hr>
+                    <p class="s-summ">A motivated and results-oriented individual with a strong background in ${field} and a <br> passion for creating efficient and user-friendly applications.</p>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title" align="center">Skills</h2>
+                    <div class="skills">
+                        ${skills.map(skill => `<span class="skill" >${skill}</span>`).join(' ')}
+                    </div>
+                </section>
+                <hr>
+                
+                <section class="section">
+                    <h2 class="section-title" align="center">Experience</h2>
+                    <p>${experience}</p>
+                </section>
+                <hr>
+                <section class="section">
+                    <h2 class="section-title" align="center">Education</h2>
+                    <p>${education}</p>
+                </section>
+                <hr>
+                <div id="button"> <button onclick="generatePDF()"> Generate by PdfHUB </button> </div>
+            `
+            ;
+            
+            div.style.display = "none"
+        });
+
+        
+
+    </script>
+
+</body>
+
+</html>
