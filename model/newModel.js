@@ -12,7 +12,6 @@ const resumeSchema = new mongoose.Schema({
     number:{
         type:Number,
         required:true,
-        unique:true
     },
     email:{
         type:String,
